@@ -1,6 +1,6 @@
-# Version Control with GIT
+## Version Control with GIT
 
-## Most used commands
+### Most used commands
 
 * git status - obtain current status
 * git add file - add file to git index
@@ -9,4 +9,10 @@
 * git log - show commit history
 
 - Branch is basically a different timezone in the same repository
+- Branches are used to develop features isolated from each other
+
+## ktlint
+
+- Obrigatório ter o ktlint instalado e a correr no projeto
+- Tasks -> verification -> ktlintCheck
 - 
