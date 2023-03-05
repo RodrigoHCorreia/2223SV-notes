@@ -3,13 +3,8 @@
 
 ### Dúvidas
 
-- Ver se nos apontamentos faltou algum ponto chave ou se há alguma incoerência.
-- Porque fazer o join a seguir ao start para garantir o sincronismo? não chega o join?
-- O sentido de ao variar o número de reps o teste poder falhar tem haver com o facto do assert ser executado antes da thread terminar?
-- "Segundo" EchoServer comecei a ouvir pior e não entendi bem a utilização do clientId e tenho a impressão que não ouvi bem a intenção do mesmo.
-- Verificar reader e writer se é o que eu entendi.
----
-* Alterar thread para Thread, é um construtor e não uma função.
+- Porque fazer o join a seguir ao start para garantir o sincronismo? não chega o join? - 
+  - O start indica que a thread está pronta a ser executada, o join espera que a thread termine, logo é necessário fazer ambos.
 
 ## Pontos que consegui apanhar
 
@@ -21,8 +16,8 @@
 - Um **socket** é um endpoint de comunicação, ou seja, **é um par de endereços (IP e porta)**, usado como uma interface para o protocólo **TCP/IP**.
 - o **inputStream** fornece um canal de leitura de dados em bytes.
 - o **outputStream** fornece um canal de escrita de dados em bytes.
-- o **reader** (lê sequências de caracteres) transforma uma sequência de bytes numa sequência de caracteres. **??**
-- o **writer** (escreve sequências de caracteres)transforma uma sequência de caracteres em uma sequência de bytes. **??**
+- o **reader** (lê sequências de caracteres) transforma uma sequência de bytes numa sequência de caracteres.
+- o **writer** (escreve sequências de caracteres)transforma uma sequência de caracteres em uma sequência de bytes. 
 - um **runnable** é um objeto que tem um método run, sem parametros e sem retorno.
 - **Thread** { ... } cria uma thread que executa o código dentro das chaves, mas como é um trailling lambda, não é necessário passar o runnable como argumento.
   
@@ -37,7 +32,7 @@ class EchoServer {
 
     fun run() {
         serverSocket.bind(InetSocketAddress(8080))
-        val th = thread {
+        val th = Thread {
             while (true) {
                 val socket = serverSocket.accept()
                 val inputStream = socket.getInputStream()
@@ -74,7 +69,7 @@ class ThreadBasicsTest {
 
     @Test
     fun first() {
-        val th = thread {
+        val th = Thread {
             anInteger +=1
         }
         th.start()
@@ -94,7 +89,7 @@ class ThreadBasicsTest {
     @Test
     fun second() {
         val N_OF_THREADS = 10
-        val N_OF_REPS = 1000 // conforme o número de reps pode falhar ou não
+        val N_OF_REPS = 1000 // conforme o número de reps a probabilidade de falhar ou não aumenta
         val ths = mutableListOf<Thread>()
         repeat(N_OF_THREADS) {
             val th = Thread {
@@ -106,7 +101,7 @@ class ThreadBasicsTest {
             ths.add(th)
         }
         ths.forEach {
-            it.join() //PORQUE?? NÃO ENTENDI
+            it.join()
         }
         assertEquals(N_OF_THREADS * N_OF_REPS, anInteger)
     }

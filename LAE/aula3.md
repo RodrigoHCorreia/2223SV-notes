@@ -3,12 +3,12 @@
 **Student.java**
 ```java
 public class Student {
-    private final int nr; // <=> val
+    private xfinal int nr; // <=> val
     private String name; // <=> var
 
     public Student(int nr, String name) {
         this.nr = nr;
-        .name = name;
+        this.name = name;
     }
 
     public int getNr() {
