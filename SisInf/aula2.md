@@ -16,8 +16,8 @@ não terminada com commit.
 
 - Se um escalonamento é **_cascadeless_**, não contem **_dirty reads_**.
   - Chama-se **_cascadeless_** porque para contornar este problema deveriamos abortar as transações que leram o valor em cascata.
-- Se um escalonamento não é **_cascadeless_**, faz **_dirty reads_**.
-- Um escalonamento pode ser não recuperável.
+- Se um escalonamento é **_non cascadeless_**, faz **_dirty reads_**.
+- Um escalonamento pode ser não recuperável, por exemplo caso seja **_non cascadeless_** e faça commit antes da transação que depende.
 - Um **escalonamento** S diz-se **estrito** se nenhuma das suas transações ler nem escrever um item escrito por outra transação ainda não terminada, ou seja, se não existirem **_dirty reads_** nem **_dirty writes_**(esmagamento de updates não confirmados).
 - Um **escalonamento** S diz-se **série** se para toda a sua transação T as operações de T são executadas consecutivamente, sem interposição de operações de outras transações. Limitam a concorrência. Para **N** transações, existem **N!** escalonamentos série possíveis.
 
