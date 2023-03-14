@@ -38,4 +38,5 @@ ret
 ### C Threads
 
 - **uthread_t** - estrutura que representa uma thread
-- 
+
+a thread não é criada diretamente, primeiro passa por um wrapper, que cria o contexto da thread, e depois chama a função que a thread vai executar.

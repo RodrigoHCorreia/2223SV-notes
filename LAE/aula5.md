@@ -32,6 +32,7 @@ fun Person.print(){
 - esta tradução para bytecode cria uma nova classe com o nome do ficheiro, neste caso PersonKt, e dentro desta classe temos o método print, que é um método estático, e que recebe como parâmetro um objecto do tipo Person.
 
 Em java:
+
 ```java
 public class Person {
     final int nr;
@@ -79,3 +80,4 @@ em java todas as classes herdam de Object, e a classe Object define 4 metodos: f
 - sobre um **parêmetro**, chamando getType() obtemos a classe que representa o tipo do parametro, chamando getClass() obtemos a classe que representa a instancia do parametro.
 - A maquina virtual só tem um representante para cada tipo durante a sua execução.
 - Classes, Campos, Métodos, Construtores, são todos membros.
+- 

@@ -14,7 +14,6 @@
 **Descritor de métodos em bygtecode:** (opcional: descritor do tipo dos argumentos)descritor do tipo do retorno
 **Descritor de campo:** Descritor do tipo do campo
 
-
 - **static** -> classifica membros, classe.membro (gerado 1 vez)
 - **não static** -> <instância da classe>.membro (gera N vezes, N = número de instâncias da classe)
 - membros não estáticos podem ser acessador por membros estáticos, mas não o contrário
