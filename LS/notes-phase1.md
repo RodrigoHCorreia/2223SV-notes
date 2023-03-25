@@ -7,4 +7,3 @@
 - função em Service
 - acesso à base de dados em Repository
 - criação do output model, com devidas chaves estrangeiras etc.
-- 

@@ -1,6 +1,6 @@
 # Aula 8 - Logger cont.
 
-- através de @AltName - podemos configurar o nome da propriedade
+- através de `@AltName` - podemos configurar o nome da propriedade
   -  Estático para cada objeto
 - através de @?? - poder configurar o valor da propriedade
   - Dinâmico.
@@ -31,5 +31,4 @@ class FormatStringToUpper implements Formatter {
 
 # Posters
 
-- Quando temos acesso à interface sem ser necessário utilizar reflexão, devemos utilizar sempre a interface.
-- só usamos reflexão para aceder a coisas que não temos acesso.
+- **só usamos reflexão para aceder a coisas que não temos acesso.**

@@ -18,9 +18,8 @@ class Classroom{
 }
 ```
 
-- Em java não existem funções de extensão
+Função de extensão em kotlin:
 
-Em kotlin:
 ```kotlin
 class Person(val nr: Int, val name: String)
 
@@ -29,9 +28,8 @@ fun Person.print(){
 }
 ```
 
-- esta tradução para bytecode cria uma nova classe com o nome do ficheiro, neste caso PersonKt, e dentro desta classe temos o método print, que é um método estático, e que recebe como parâmetro um objecto do tipo Person.
-
-Em java:
+- Em java não existem funções de extensão
+- a sua tradução para bytecode cria uma nova classe com o nome do ficheiro, neste caso PersonKt, e dentro desta classe temos o método print, que é um método estático, e que recebe como parâmetro um objecto do tipo Person.
 
 ```java
 public class Person {
@@ -53,7 +51,7 @@ public class Person {
 
 > Programming with Metadata <=> Metadata at runtime <=> Reflection
 
-- Reflection <=	API sobre a metadata
+- `Reflection` <=	API sobre a metadata
 
 Tipos que representam a metadata e métodos para navegar na metadata
 
@@ -68,7 +66,7 @@ em java todas as classes herdam de Object, e a classe Object define 4 metodos: f
   - application classloader - carrega as classes da classpath
   - url classloader - outros URLs != classpath
 
-- Checked exceptions - são exceptions que são verificadas em tempo de compilação, e que são obrigatórias de serem tratadas, caso não sejam tratadas o código não compila.
+- `Checked exceptions` - são exceptions que são verificadas em tempo de compilação, e que são obrigatórias de tratar, caso não sejam tratadas o código não compila.
 - n podemos usar expressões que possam lançar exceções em lambdas.
 
 ### TPC 
@@ -77,7 +75,8 @@ em java todas as classes herdam de Object, e a classe Object define 4 metodos: f
 ## Posters
 
 - A API de reflexão só dá **representantes** de tipos e classes.
-- sobre um **parêmetro**, chamando getType() obtemos a classe que representa o tipo do parametro, chamando getClass() obtemos a classe que representa a instancia do parametro.
+- sobre um **parêmetro**, chamando:
+  -  `getType()` obtemos a classe que representa o tipo do parametro;
+  -  `getClass()` obtemos a classe que representa a instancia do parametro.
 - A maquina virtual só tem um representante para cada tipo durante a sua execução.
 - Classes, Campos, Métodos, Construtores, são todos membros.
-- 
