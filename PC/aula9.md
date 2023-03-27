@@ -63,8 +63,7 @@ private class NArySemaphore(
                     completeAllThatCanBeCompleted()
                     throw e
                 }
-
-                remainingNanos = request.condition.awaitNanos(remainingNanos)
+                
                 if(myRequestNode.value.isDone) {
                     return true
                 }
