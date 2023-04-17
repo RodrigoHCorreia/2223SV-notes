@@ -21,8 +21,12 @@
 
 **OOK**: _On-Off Keying_ (Caso particular de ASK - _Amplitude Shift Keying_)
 
+<img src="../CD/docs/aula1/OOK.png">
+
 **FSK**: _Frequency Shift Keying_
   * frequência para 1 é maior que a frequência de um bit 0
+
+<img src="../CD/docs/aula1/FSK.png">
 
 **PSK**: _Phase Shift Keying_
   * Inversão de fase na mudança de 0 para 1 e vice-versa
@@ -31,9 +35,13 @@
     * Frequência
     * Fase
 
+<img src="../CD/docs/aula1/PSK.png">
+
 **QAM**: _Quadrature Amplitude Modulation_
   * Modulação de amplitude e fase
   * 4 bits códificados por sinal.
+
+<img src="../CD/docs/aula1/QAM.png">
 
 * **Qualificadores e grandezas:**
   * **Tb, tempo de bit [s]** - corresponde ao tempo que o sinal correspondente a cada bit está presente no canal. É o inverso da taxa de transmissão.
