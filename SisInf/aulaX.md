@@ -1,4 +1,4 @@
-# Aula - Exercícios sobre gatilhos
+# Aula - Exercícios sobre gatilhos, Acesso a Dados
 
 **Testes intrusivos** - alteram a base de dados para testar, porém como ainda não está em fase de produção, não há problema.
 
@@ -104,6 +104,8 @@ $$;
 
 #### A estudar:
 
+[]Controlo transacional
+
 []Triggers
 
 []Procedures
@@ -117,3 +119,16 @@ $$;
 []Raise notice
 
 []Modos(SHARE, UPDATE, ETC.)
+
+[]Transações com save points
+
+[]WITH CHECK OPTION
+
+
+## Acesso a Dados (com JPA)
+
+### Conceitos
+
+Controlo de concorrência pessimista - bloqueia o recurso para que ninguém o possa usar.
+Controlo de concorrência otimista - não bloqueia o recurso, mas verifica se o recurso foi alterado por outra pessoa antes de o alterar.
+
