@@ -80,6 +80,12 @@ Quando é instânciado um objeto, é criado um espaço na memória para o objeto
   - invoca o construtor de instância
   - passa o receiver (this)
 
+
+`invokevirtual`: for invoking instance methods (with support for polymorphism)
+`invokestatic`: for invoking static methods
+`invokespecial`: for invoking constructors, private methods, or superclass methods
+`invokeinterface`: for invoking interface methods
+`invokedynamic`: for dynamic method invocation in non-Java languages running on the JVM
 ## Posters
 
 - implicito é tudo aquilo que não vemos mas é gerado
