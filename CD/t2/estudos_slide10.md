@@ -146,7 +146,5 @@ como foi feito o calculo do y3 que tem mais de 1 bit errado?
 <img src="../../CD/docs/estudoT2/calculo_sindroma.png">
 
 Duvida: CRC da pag 37 até à 41
-Duvida: a cena das matrizes.
-
-### Matriz Geradora
-
+Duvida: multiplicação de matrizes. (Ht por y)
+Duvida: Diagrama de blocos do recetor, regras de decisão etc.
