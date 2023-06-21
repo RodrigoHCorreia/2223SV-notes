@@ -73,6 +73,8 @@
 - **Repeatable Read** - bem formada e de duas fases
 - **Serializable** - bem formada, de duas fases e com predicate locking
 
+- Repeatable Read - vai ler sempre o mesmo valor dos registos desde o começo da transação, mesmo que exista um novo estado commited estável.
+
 ## Protocolo 2PL
 
 - Uma transação é sempre bem comportada relativamente às outras (write é bem formada e de duas fases), ou seja, não existe a anomalia de dirty write. o nível `read uncommited` só é possível com modo read-only.
