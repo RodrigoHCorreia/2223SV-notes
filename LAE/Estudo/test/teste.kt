@@ -1,11 +1,17 @@
-package Estudo.test;
+fun <T : Any> Sequence<T>.repeat(times: Int) = sequence{
+    val iter = this@repeat.iterator()
+    while(iter.hasNext()) {
+        val curr = iter.next()
+        for(i in 0 until times){
+            yield(curr)
+        }
+    }
+}
 
-public class teste {
-    val strs = mutableListOf("ISEL", "LEIC", "LAE")
-    
-    strs[2] as Int = 5
-    (strs as Array<Int>)[2] = 5
-    (strs as MutableList<Int>).add(5)
-    strs.add(5 as String)
-
+fun <T : Any> Sequence<T>.repeat(times: Int) = sequence{
+        for(i in this){
+            for(k in 0 until times){
+                yield(i)
+            }
+        }        
 }
